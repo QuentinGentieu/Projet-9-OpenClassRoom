@@ -1,0 +1,850 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+/*###########################################################################
+  ############################ KEYFRAMES ##################################
+  ###########################################################################*/
+@keyframes text-Up {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+@keyframes fadeInUp{
+  0%{
+	  transform:translate(0px, 300px); opacity: 0;
+	}
+	
+  100%{
+	  transform:translate(0px, 0); opacity: 1;
+	}
+}
+
+@keyframes fadeInDown{
+  0%{
+	  transform:translate(0px, -300px); opacity: 0;
+	}
+	
+  100%{
+	  transform:translate(0px, 0); opacity: 1;
+	}
+}
+
+@keyframes rotating {
+  0% { 
+    transform: rotate(0); 
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateY(20px);
+    }
+    30%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    60%{
+        transform: translateY(10px);
+    }
+    70%{
+        transform: translateX(10px);
+    }
+    80%{
+        transform: translateY(-10px);
+    }
+    90%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/*###########################################################################
+  ############################ ROTATION DES FLEURS ##################################
+  ###########################################################################*/
+
+.site-footer ul::after {
+	content: url("./assets/images/hibiscus_footer.png");
+	position: absolute;
+	left: calc(50% - 323px);
+	bottom: -28.5em;
+	z-index: -1;
+	animation: rotating 15s linear infinite;
+}
+
+.site-footer::after {
+	content: url("./assets/images/orchid.png");
+	position: absolute;
+	right: -4em;
+	bottom: 58em;
+	animation: rotating 15s linear infinite;
+}
+
+#studio h2::before {
+	content: url("./assets/images/random_flower.png");
+	position: absolute;
+	left: -1em;
+	top: 0;
+	animation: rotating 15s linear infinite;
+}
+
+
+.site-footer::before {
+	content: url("./assets/images/Sunflower.png");
+	position: absolute;
+	left: 4em;
+	top: 0em;
+	animation: rotating 15s linear infinite;
+}
+
+#studio h2::after {
+	content: url("./assets/images/flower.png");
+	position: absolute;
+	right: 1em;
+	top: 1.2em;
+	animation: rotating 15s linear infinite;
+}
+
+/*###########################################################################
+  ############ DERNIERE SECTION / SECTION PARTIELLE #########################
+  ###########################################################################*/
+
+.new-section{
+	margin-top:700px !important;
+}
+
+.oscar{
+	content: url("./assets/images/oscars.png");
+	position: absolute;
+	right: 14em;
+	top: 248em;
+	animation: fadeInUp 1s 1;
+}
+
+.orange-background{
+	content: url("./assets/images/orange_place_bg.png");
+	position: absolute;
+	right: 25em;
+	top: 233em;
+	width :1100px;
+	height :600px;
+	animation: fadeInUp 1s 1;
+}
+
+.text-oscars{
+	position: absolute;
+	right: 13em;
+	top: 82em;
+	
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 52px;
+	letter-spacing: -0.02em;
+	animation: fadeInUp 1s 1;
+
+	color: #FFF5E9;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image1{
+	content: url("./assets/images/orange_place_bg.png");
+	position: absolute;
+	right: 52em;
+	top: 192em;
+	width :1100px;
+	height :600px;
+}
+
+/*###########################################################################
+  ############################ SLIDER ##################################
+  ###########################################################################*/
+
+.main-character figure{
+	display : none;
+}
+
+.main-character h3{
+	position : relative;
+	right : 400px;
+}
+
+.other-characters figure{
+	display : none;
+}
+
+.swiper {
+	width: 1450px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.swiper-slide img {
+	display: block;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+	background-image: none !important;
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+	background-image: none !important;
+}
+
+/*###########################################################################
+  ############################ HEADER ##################################
+  ###########################################################################*/
+
+.banner-video {
+	background-image: url("./assets/images/banner.png");
+	min-height: 806px;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-video img {
+	margin-top: -10%;
+	width: 50%;
+	position : absolute;
+	width : 700px;
+	animation:  floating 10s linear infinite;
+}
+
+/*###########################################################################
+  ############################ LIEU / NUAGE ANIMATION #######################
+  ###########################################################################*/
+
+.animation{
+    height: 18vh;
+    background-image: url("./assets/images/Studio_Koukaki-image_place.png");
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.Grand-Nuage{
+    height: 100px;
+    position: absolute;
+    top: 1172px;
+    right: 100px;
+    filter: blur(8px);
+	width : 250px;
+
+}
+
+.Petit-Nuage{
+    height:70px;
+    position: absolute;
+    top: 1317px;
+    right: 390px;
+    filter: blur(8px);
+	width : 145px;
+}
+
+.paragraphe-place{
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 25px;
+	/* or 167% */
+
+	letter-spacing: -0.02em;
+
+	color: #000000;
+	
+	padding-right : 50px;
+}
+
+.story #place > div p {
+  padding-left: 5.7em;
+}
+
+.story #place {
+	display: flex;
+	background-image: url("./assets/images/Studio_Koukaki-image_place.png");
+	width: 100%;
+	min-height: 699px;
+	background-size: cover;
+}
+
+/*###########################################################################
+  ############################ NAVBAR ##################################
+  ###########################################################################*/
+
+
+/*------------------------CREATION / CUSTOMISATION DE LA NAVBAR--------------------------------*/
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffd5a2;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 2px;
+  width: 27px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: black;
+    font-size: 64px;
+    font-family: "Roboto Mono";
+    background-color: #fff5e9;
+  }
+
+  .menu > li:hover{
+    text-shadow: #ffb082 1px 0 10px;;
+  }
+  
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  .menu > li:last-child{
+    font-size: 18px !important;
+    text-shadow: none !important;
+  }
+
+  .menu > li > .logo{
+    padding-bottom: 100px !important;
+    height: 227px !important;
+  }
+
+.title{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21.4799px !important;
+    line-height: 27px;
+
+    letter-spacing: -0.02em;
+
+    color: #000000 !important;
+
+    padding-left:42%;
+	
+	background-image : none !important;
+	background-color : none !important;
+	
+}
+
+
+/* ------------- Container styling ---------------- */
+.container
+{
+  width: 0%;
+  height: 100vh;
+}
+
+/* -------------- Burgur styling ----------------- */
+.btn
+{
+  top: 0;
+  right: 100px;
+  height: 50px;
+  width: 60px;
+  padding: 16px;
+  background: #ffd5a2;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.btn .bar1, .btn .bar2, .btn .bar3
+{
+  height: 2px;
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+/* ----------- close btn ------------- */
+.close-btn
+{
+  top: 0;
+  right: 100px;
+  height: 50px;
+  width: 60px;
+  padding: 20px;
+  background: #ffd5a2;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.close-btn .bar1
+{
+  transform: rotate(-130deg);
+  height: 1px;
+  width: 46%;
+  display: block;
+  background: #000;
+  position: absolute;
+}
+
+.close-btn .bar2
+{
+  display: none;
+}
+
+.close-btn .bar3
+{
+  transform: rotateZ(130deg);
+  height: 1px;
+  width: 46%;
+  display: block;
+  background: #000;
+  position: absolute;
+}
+
+/* ------------- Hide menu ----------- */
+.menu
+{
+  display: none;
+}
+
+/* ------------------- Menu styling --------------- */
+.open-menu
+{
+  width: 100%;
+  height: 100vh;
+  background: #fff5e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-menu ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.open-menu ul li
+{
+  list-style: none;
+  padding: 25px;
+}
+
+
+.open-menu ul li a
+{
+  text-decoration: none;
+  text-styling: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  color: #000;
+
+}
+
+.open-menu ul li a:hover
+{
+  text-shadow: #ffb082 1px 0 10px;
+}
+
+
+.cat-1{
+	height: 156px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 348px;
+    top: 132px;
+	animation: floating 5s linear infinite;
+}
+
+.cat-2{
+	height: 124px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 179px;
+    top: 813px;
+    animation: floating 10s linear infinite;
+}
+
+.cat-3{
+	height: 151px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 1042px;
+    top: 461px;
+	animation: floating 15s linear infinite;
+}
+
+.orchid{
+	height: 232px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: -90px;
+    top: 42px;
+	animation: rotating 15s linear infinite;
+}
+
+.sunflower{
+	height: 243px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 962px;
+    top: 48px;
+	animation: rotating 15s linear infinite;
+}
+
+.random-flower{
+	height: 116px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 1371px;
+    top: 373px;
+	animation: rotating 15s linear infinite;
+}
+
+.flower{
+	height: 100px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 308px;
+    top: 486px;
+	animation: rotating 15s linear infinite;
+}
+
+
+.hibiscus{
+	height: 800px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 1061px;
+    top: 639px;
+    filter: blur(5px);
+	animation: rotating 15s linear infinite;
+}
+
+.logo{
+	height: 156px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 640px;
+    top: 24px;
+}
+
+.menu ul{
+	align-items : center !important;
+}
+
+.copyright{
+	color : black;
+	padding-top:200px !important;
+}
+
+.move-margin{
+	margin-top : 130px;
+}
+
+
+/*###########################################################################
+  ############################ RESPONSIVE ###################################
+  ###########################################################################*/
+
+/*------------------------APPARITION FADE-IN--------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+  .section-animation-fadeInUp {
+    animation: fadeInUp 1s 1;
+  }
+}
+
+/*------------------------APPARITION FADE-DOWN--------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+  .section-animation-fadeInDown {
+    animation: fadeInDown 1s 1;
+  }
+}
+
+/*------------------------RESPONSIVE VERSION DESKTOP--------------------------------*/
+@media screen and (min-width:1023px){
+    .banner{
+        display: none;
+    }
+}
+
+/*------------------------RESPONSIVE VERSION MOBILE--------------------------------*/
+@media screen and (max-width:1024px){
+    .banner-video{
+        display: none;
+    }
+	
+	.main-character h3{
+		right:0px;
+	}
+	
+	.Grand-Nuage{
+		display : none;
+	}
+	
+	.Petit-Nuage{
+		display : none;
+	}
+	
+	.story #place h3{
+		right:-90px;
+		position : relative;
+	}
+	
+	.story #place > div p{
+		margin-top : 100px;
+		padding-left : 0em;
+		padding-right : 0px;
+	}
+	
+	#studio h2::after{
+		display : none;
+	}
+	
+	#studio h2::before {
+		display : none;
+	}
+	
+	#studio h2{
+		font-size:2em;
+	}
+	
+	.site-footer::before{
+		display:none;
+	}
+	
+	.site-footer::after{
+		display:none;
+	}
+	
+	.oscar{
+		right:4.5em;
+		top:276em;
+	}
+	
+	.orange-background{
+		right: -5em;
+		top: 279em;
+		width: 530px;
+		height: 435px;
+	}
+	
+	.text-oscars{
+		font-size: 21px;
+		right: 1em;
+		top: 193em;
+	}
+	
+	.title{
+		font-size:18.5px !important;
+		padding-left:0%;
+	}
+	
+	.orchid{
+		display:none;
+	}
+	
+	.flower{
+		display:none;
+	}
+	
+	.cat-1{
+		display:none;
+	}
+	
+	.cat-2{
+		display:none;
+	}
+	
+	.cat-3{
+		display:none;
+	}
+	
+	.sunflower{
+		display:none;
+	}
+	
+	.random-flower{
+		display:none;
+	}
+	
+	.hibiscus{
+		display:none;
+	}
+	
+	.menu > li{
+		font-size:40px;
+	}
+	
+	.menu > li > .logo{
+		height: 185px !important;
+	}
+	
+	.logo{
+		left: 100px;
+	}
+	
+	.close-btn{
+		right : 0px;
+	}
+	
+	.btn{
+		right:0px
+	}
+	
+	.open-menu ul li a
+	{
+	  text-decoration: none;
+	  text-styling: none;
+	  font-style: normal;
+	  font-weight: 400;
+	  font-size: 40px;
+	  line-height: 84px;
+	  color: #000;
+	}
+	
+	.respons{
+		font-size : 30px !important;
+	}
+	
+	ul{
+		margin : 0em !important;
+	}
+	
+	.move-margin{
+		margin-top : 200px;
+	}
+	
+	.open-menu{
+		height : 130vh;
+	}
+}
+
